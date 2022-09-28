@@ -8,7 +8,6 @@ const SingleGym = ({ gym }) => {
             <img src={image} alt="" />
             <div className="gym-info">
                 <h4>{name}</h4>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quos repellendus </p>
                 <p>Time required: {duration}s</p>
             </div>
             <button className='btn-gym'>

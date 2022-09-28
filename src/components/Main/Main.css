@@ -6,3 +6,13 @@ main{
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1.5rem;
 }
+.title{
+    font-size: 20px;
+    display: flex;
+    justify-content: first baseline;
+    align-items: center;
+}
+.title h1{
+    margin: 0;
+    font-weight: 500;
+}

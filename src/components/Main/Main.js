@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SingleGym from '../SingleGym/SingleGym';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faDumbbell } from '@fortawesome/free-solid-svg-icons'
 import './Main.css';
 
 const Main = () => {
@@ -12,7 +14,8 @@ const Main = () => {
     return (
         <main>
             <div className="title">
-                <p>Monu Mia Gym Center</p>
+                <FontAwesomeIcon icon={faDumbbell}></FontAwesomeIcon>
+                <h1>Monu Mia Gym Center</h1>
             </div>
             <h3>Select Prefered Workout</h3>
             <div className="gym-container">
