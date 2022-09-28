@@ -1,14 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './SideBar.css';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import me from '../../me.jpg';
 
-const SideBar = ({total}) => {
+const SideBar = ({ total }) => {
     const [breakDuration, setBreakDuration] = useState("");
     const handleBreak = e => {
-        if(e.length <= 3){
+        if (e.length <= 3) {
             setBreakDuration(e);
+            localStorage.setItem('break-duration', JSON.stringify(e))
         }
     }
+    useEffect(() => {
+        const storedBreakDuration = JSON.parse(localStorage.getItem('break-duration'));
+        if (storedBreakDuration) {
+            setBreakDuration(storedBreakDuration);
+        }
+    }, [])
     return (
         <div className='side-bar'>
             {/* user info */}
@@ -53,9 +62,10 @@ const SideBar = ({total}) => {
                 </div>
             </div>
             {/* button completed toast */}
-            <button className='btn-complete'>
+            <button onClick={() => toast("Congratulation on loosing 250 calories")} className='btn-complete'>
                 Activity Completed
             </button>
+            <ToastContainer />
         </div>
     );
 };
