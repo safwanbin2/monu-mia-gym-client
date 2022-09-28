@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SideBar.css';
 import me from '../../me.jpg';
 
-const SideBar = () => {
+const SideBar = ({total}) => {
+    const [breakDuration, setBreakDuration] = useState("");
+    const handleBreak = e => {
+        if(e.length <= 3){
+            setBreakDuration(e);
+        }
+    }
     return (
         <div className='side-bar'>
+            {/* user info */}
             <div className="user-info">
                 <img src={me} alt="" />
                 <h5>Monu Mia</h5>
             </div>
+            {/* body info */}
             <div className="body-info">
                 <div className="weight">
                     <h3>80Kg</h3>
@@ -23,6 +31,31 @@ const SideBar = () => {
                     <h4>Age</h4>
                 </div>
             </div>
+            {/* Add a break section */}
+            <div className="break">
+                <h3>Add a break</h3>
+                <div className="options" onClick={(e) => handleBreak(e.target.innerText)}>
+                    <div>10s</div>
+                    <div>20s</div>
+                    <div>30s</div>
+                    <div>40s</div>
+                    <div>50s</div>
+                </div>
+            </div>
+            {/* byam details */}
+            <div className="display">
+                <h3>Workout Details</h3>
+                <div className='workout-display'>
+                    <h4>Workout Time: {total ? total : '00'} seconds</h4>
+                </div>
+                <div className='break-display'>
+                    <h4>Break Time: {breakDuration ? breakDuration : '00'} seconds</h4>
+                </div>
+            </div>
+            {/* button completed toast */}
+            <button className='btn-complete'>
+                Activity Completed
+            </button>
         </div>
     );
 };

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDumbbell } from '@fortawesome/free-solid-svg-icons'
 import './Main.css';
 
-const Main = () => {
+const Main = ({handleAddToList}) => {
     const [gyms, setGyms] = useState([]);
     useEffect( () => {
         fetch('data.json')
@@ -23,6 +23,7 @@ const Main = () => {
                     gyms.map(gym => <SingleGym
                         key={gym.id}
                         gym={gym}
+                        handleAddToList={handleAddToList}
                     ></SingleGym>)
                 }
             </div>

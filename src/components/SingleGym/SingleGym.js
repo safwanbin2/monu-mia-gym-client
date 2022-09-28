@@ -1,7 +1,7 @@
 import React from 'react';
 import './SingleGym.css';
 
-const SingleGym = ({ gym }) => {
+const SingleGym = ({ gym, handleAddToList }) => {
     const { image, name, duration } = gym;
     return (
         <div className='gym'>
@@ -10,7 +10,7 @@ const SingleGym = ({ gym }) => {
                 <h4>{name}</h4>
                 <p>Time required: {duration}s</p>
             </div>
-            <button className='btn-gym'>
+            <button onClick={() => handleAddToList(duration)} className='btn-gym'>
                 <p>Add to list</p>
             </button>
         </div>
