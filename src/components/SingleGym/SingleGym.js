@@ -1,11 +1,19 @@
 import React from 'react';
 import './SingleGym.css';
 
-const SingleGym = ({gym}) => {
-    console.log(gym)
+const SingleGym = ({ gym }) => {
+    const { image, name, duration } = gym;
     return (
         <div className='gym'>
-            this is single gym
+            <img src={image} alt="" />
+            <div className="gym-info">
+                <h4>{name}</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic quos repellendus </p>
+                <p>Time required: {duration}s</p>
+            </div>
+            <button className='btn-gym'>
+                <p>Add to list</p>
+            </button>
         </div>
     );
 };
