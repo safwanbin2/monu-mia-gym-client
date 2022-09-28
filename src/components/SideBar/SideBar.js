@@ -35,11 +35,11 @@ const SideBar = ({total}) => {
             <div className="break">
                 <h3>Add a break</h3>
                 <div className="options" onClick={(e) => handleBreak(e.target.innerText)}>
-                    <div>10s</div>
-                    <div>20s</div>
-                    <div>30s</div>
-                    <div>40s</div>
-                    <div>50s</div>
+                    <div>10</div>
+                    <div>20</div>
+                    <div>30</div>
+                    <div>40</div>
+                    <div>50</div>
                 </div>
             </div>
             {/* byam details */}
