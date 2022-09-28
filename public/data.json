@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Dumbel",
+        "image": "./img/dumbel.jpg",
+        "duration": 30
+    },
+    {
+        "id": 2,
+        "name": "Intense Sitting",
+        "image": "./img/intense-sitting.jpg",
+        "duration": 50
+    },
+    {
+        "id": 3,
+        "name": "Push up",
+        "image": "./img/pushup.jpg",
+        "duration": 15
+    },
+    {
+        "id": 4,
+        "name": "Rope Pulling",
+        "image": "./img/rope-pulling.jpg",
+        "duration": 40
+    },
+    {
+        "id": 5,
+        "name": "Rope Throwing",
+        "image": "./img/rope-throwing.jpg",
+        "duration": 45
+    },
+    {
+        "id": 6,
+        "name": "Walking",
+        "image": "./img/waling.jpg",
+        "duration": 55
+    }
+]
