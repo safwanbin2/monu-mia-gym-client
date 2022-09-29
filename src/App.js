@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import Main from './components/Main/Main';
+import QnA from './components/QnA/QnA';
 import SideBar from './components/SideBar/SideBar';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
         <Main handleAddToList={handleAddToList}></Main>
         <SideBar total={total}></SideBar>
       </div>
-      <h1>Answer and question</h1>
+      <QnA></QnA>
     </div>
   );
 }
