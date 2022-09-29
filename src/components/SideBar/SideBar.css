@@ -64,3 +64,9 @@
     color: #55efc4;
     border: 2px solid #55efc4;
 }
+@media screen and (max-width: 768px){
+    .side-bar{
+        padding: 3rem;
+        height: auto;
+    }
+}

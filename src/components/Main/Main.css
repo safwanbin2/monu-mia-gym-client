@@ -16,3 +16,8 @@ main{
     margin: 0;
     font-weight: 500;
 }
+@media screen and (max-width: 768px){
+    .gym-container{
+        grid-template-columns: 1fr;
+    }
+}
