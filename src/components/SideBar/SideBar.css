@@ -1,6 +1,9 @@
 .side-bar{
     background-color: white;
     padding: 1rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
 }
 .user-info img{
     width: 50px;

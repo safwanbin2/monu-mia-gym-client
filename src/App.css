@@ -1,10 +1,8 @@
-.App {
-  /* width: 100%; */
-  background-color: rgb(224, 221, 221);
-}
 .top{
+  position: relative;
   display: grid;
   grid-template-columns: 3fr 1fr;
+  background-color: rgb(224, 221, 221);
 }
 .App-logo {
   height: 40vmin;

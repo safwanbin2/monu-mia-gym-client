@@ -3,7 +3,7 @@ import './QnA.css';
 
 const QnA = () => {
     return (
-        <div>
+        <div className='q-section'>
             <h1>Hot Questions and Answers</h1>
             <div className='qna'>
                 <h3>Q.1: How does react work?</h3>
@@ -14,7 +14,8 @@ const QnA = () => {
                 <p>A.2: Props are the params that has been passed to child components as paraments. it is defined by components data. While state is used for component inside data changes. this works on interl component</p>
             </div>
             <div className="qna">
-
+                <h3>Q.3: What does useEffect do except fetchig data?</h3>
+                <p>A.3: useEffect is a react hook that is used to do some certain operation after the component is redered . It works everytime the dependencies trigger it. It does side effects job in react. to fetch data, to set a timer , direct dom manipulation also possible using useEffect.</p>
             </div>
         </div>
     );
